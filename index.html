@@ -14,7 +14,7 @@
             font-family: Arial, sans-serif;
         }
 
-        #language-buttons {
+        #language-button {
             position: absolute;
             top: 10px;
             right: 10px;
@@ -40,32 +40,41 @@
         /* 其他样式和媒体查询 */
     </style>
     <script>
-        function switchLanguage(language) {
+        function switchLanguage() {
+            var button = document.getElementById('language-button');
             var chineseSection = document.getElementById('chinese-section');
             var englishSection = document.getElementById('english-section');
+            var welcomeTitle = document.getElementById('welcome-title');
 
-            if (language === 'chinese') {
-                chineseSection.style.display = 'block';
-                englishSection.style.display = 'none';
-            } else if (language === 'english') {
+            if (chineseSection.style.display === 'block') {
+                button.textContent = '中文';
                 chineseSection.style.display = 'none';
                 englishSection.style.display = 'block';
+                welcomeTitle.textContent = 'Welcome to My Personal Website!';
+            } else {
+                button.textContent = 'English';
+                chineseSection.style.display = 'block';
+                englishSection.style.display = 'none';
+                welcomeTitle.textContent = '欢迎访问我的个人网站！';
             }
+        }
+
+        // 默认显示英文内容
+        window.onload = function () {
+            switchLanguage();
+            switchLanguage();
         }
     </script>
 </head>
 <body>
-<h1>Welcome to My Personal Website!</h1>
+<h1 id="welcome-title"></h1>
 
 <img id="profile-picture" src="path/to/your/photo.jpg" alt="Profile Picture">
 
-<div id="language-buttons">
-    <button onclick="switchLanguage('chinese')">中文</button>
-    <button onclick="switchLanguage('english')">English</button>
-</div>
+<button id="language-button" onclick="switchLanguage()">中文</button>
 
 <div id="content">
-    <div id="chinese-section">
+    <div id="chinese-section" style="display: none;">
         <h2>自我介绍</h2>
         <p>你好！我是毛潇恺，一名[你的职业/专业]。</p>
         <p>我对[你的兴趣/专长]非常热衷，并且一直在不断学习和提升自己。</p>
@@ -100,7 +109,7 @@
         <a href="https://github.com/你的GitHub用户名">访问我的GitHub</a>
     </div>
 
-    <div id="english-section" style="display: none;">
+    <div id="english-section">
         <h2>Self Introduction</h2>
         <p>Hello! I'm Xiaokai Mao, a [Your Occupation/Field].</p>
         <p>I'm passionate about [Your Interests/Expertise] and constantly striving to learn and improve myself.</p>
@@ -135,6 +144,5 @@
         <a href="https://github.com/your-github-username">Visit My GitHub</a>
     </div>
 </div>
-
 </body>
 </html>
