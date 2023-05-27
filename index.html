@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Self Introduction</title>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #language-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #profile-picture {
+            position: absolute;
+            top: 60px;
+            right: 10px;
+            width: 150px;
+            border-radius: 50%;
+        }
+
+        #content {
+            width: 80%;
+            max-width: 800px;
+        }
+
+        #chinese-section {
+            display: none;
+        }
+
+        /* 其他样式和媒体查询 */
+    </style>
+    <script>
+        function switchLanguage(language) {
+            var chineseSection = document.getElementById('chinese-section');
+            var englishSection = document.getElementById('english-section');
+
+            if (language === 'chinese') {
+                chineseSection.style.display = 'block';
+                englishSection.style.display = 'none';
+            } else if (language === 'english') {
+                chineseSection.style.display = 'none';
+                englishSection.style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+<h1>Welcome to My Personal Website!</h1>
+
+<img id="profile-picture" src="path/to/your/photo.jpg" alt="Profile Picture">
+
+<div id="language-buttons">
+    <button onclick="switchLanguage('chinese')">中文</button>
+    <button onclick="switchLanguage('english')">English</button>
+</div>
+
+<div id="content">
+    <div id="chinese-section">
+        <h2>自我介绍</h2>
+        <p>你好！我是毛潇恺，一名[你的职业/专业]。</p>
+        <p>我对[你的兴趣/专长]非常热衷，并且一直在不断学习和提升自己。</p>
+        <p>在我的个人网站上，你可以了解更多关于我以及我的经历。</p>
+
+        <h2>个人经历</h2>
+        <ul>
+            <li>[经历1]</li>
+            <li>[经历2]</li>
+            <li>[经历3]</li>
+        </ul>
+
+        <h2>技能</h2>
+        <ul>
+            <li>[技能1]</li>
+            <li>[技能2]</li>
+            <li>[技能3]</li>
+        </ul>
+
+        <h2>联系方式</h2>
+        <p>如果你对我的个人网站或者我的经历感兴趣，欢迎通过以下方式联系我：</p>
+        <ul>
+            <li>Email：[你的邮箱地址]</li>
+            <li>电话：[你的电话号码]</li>
+            <li>社交媒体：[你的社交媒体账号]</li>
+        </ul>
+
+        <footer>
+            <p>版权所有 © 2023 [你的名字]</p>
+        </footer>
+
+        <a href="https://github.com/你的GitHub用户名">访问我的GitHub</a>
+    </div>
+
+    <div id="english-section" style="display: none;">
+        <h2>Self Introduction</h2>
+        <p>Hello! I'm Xiaokai Mao, a [Your Occupation/Field].</p>
+        <p>I'm passionate about [Your Interests/Expertise] and constantly striving to learn and improve myself.</p>
+        <p>On my personal website, you can find out more about me and my experiences.</p>
+
+        <h2>Experience</h2>
+        <ul>
+            <li>[Experience 1]</li>
+            <li>[Experience 2]</li>
+            <li>[Experience 3]</li>
+        </ul>
+
+        <h2>Skills</h2>
+        <ul>
+            <li>[Skill 1]</li>
+            <li>[Skill 2]</li>
+            <li>[Skill 3]</li>
+        </ul>
+
+        <h2>Contact</h2>
+        <p>If you're interested in my personal website or my experiences, feel free to contact me through the following channels:</p>
+        <ul>
+            <li>Email: [Your Email Address]</li>
+            <li>Phone: [Your Phone Number]</li>
+            <li>Social Media: [Your Social Media Accounts]</li>
+        </ul>
+
+        <footer>
+            <p>All rights reserved © 2023 [Your Name]</p>
+        </footer>
+
+        <a href="https://github.com/your-github-username">Visit My GitHub</a>
+    </div>
+</div>
+
+</body>
+</html>
