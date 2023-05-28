@@ -21,11 +21,10 @@
         }
 
         #profile-picture {
-            position: absolute;
-            top: 60px;
-            right: 10px;
             width: 150px;
             border-radius: 50%;
+            float: right;
+            margin-left: 20px;
         }
 
         #content {
@@ -38,6 +37,10 @@
         }
 
         /* 其他样式和媒体查询 */
+        footer {
+            text-align: center;
+            margin-top: 20px;
+        }
     </style>
     <script>
         function switchLanguage() {
@@ -69,14 +72,13 @@
 <body>
 <h1 id="welcome-title"></h1>
 
-<img id="profile-picture" src="path/to/your/photo.jpg" alt="Profile Picture">
-
 <button id="language-button" onclick="switchLanguage()">中文</button>
 
 <div id="content">
     <div id="chinese-section" style="display: none;">
         <h2>自我介绍</h2>
-        <p>你好！我是毛潇恺，一名[你的职业/专业]。</p>
+        <img id="profile-picture" src="path/to/your/photo.jpg" alt="Profile Picture">
+        <p>你好！我是[你的名字]，一名[你的职业/专业]。</p>
         <p>我对[你的兴趣/专长]非常热衷，并且一直在不断学习和提升自己。</p>
         <p>在我的个人网站上，你可以了解更多关于我以及我的经历。</p>
 
@@ -101,17 +103,12 @@
             <li>电话：[你的电话号码]</li>
             <li>社交媒体：[你的社交媒体账号]</li>
         </ul>
-
-        <footer>
-            <p>版权所有 © 2023 [你的名字]</p>
-        </footer>
-
-        <a href="https://github.com/你的GitHub用户名">访问我的GitHub</a>
     </div>
 
     <div id="english-section">
         <h2>Self Introduction</h2>
-        <p>Hello! I'm Xiaokai Mao, a [Your Occupation/Field].</p>
+        <img id="profile-picture" src="path/to/your/photo.jpg" alt="Profile Picture">
+        <p>Hello! I'm [Your Name], a [Your Occupation/Field].</p>
         <p>I'm passionate about [Your Interests/Expertise] and constantly striving to learn and improve myself.</p>
         <p>On my personal website, you can find out more about me and my experiences.</p>
 
@@ -136,13 +133,12 @@
             <li>Phone: [Your Phone Number]</li>
             <li>Social Media: [Your Social Media Accounts]</li>
         </ul>
-
-        <footer>
-            <p>All rights reserved © 2023 [Your Name]</p>
-        </footer>
-
-        <a href="https://github.com/your-github-username">Visit My GitHub</a>
     </div>
 </div>
+
+<footer>
+    <p>版权所有 © 2023 [你的名字]</p>
+    <a href="https://github.com/你的GitHub用户名">访问我的GitHub</a>
+</footer>
 </body>
 </html>
